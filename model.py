@@ -1,3 +1,10 @@
+"""
+# The SUIM-Net model for underwater image segmentation
+# Paper:  
+# Maintainer: Jahid (email: islam034@umn.edu)
+# Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
+# Usage: for academic and educational purposes only
+"""
 import tensorflow as tf
 from keras.models import Input, Model
 from keras.layers import Conv2D, BatchNormalization, Activation, MaxPooling2D
@@ -99,7 +106,6 @@ def Suim_Decoder(enc_inputs, n_classes):
     ## return output layer
     out = Conv2D(n_classes, (3, 3), padding='same', activation='sigmoid')(dec_3s) 
     return out
-
 
 
 class SUIM_Net():
