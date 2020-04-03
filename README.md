@@ -11,16 +11,16 @@
 
 #### SUIM-Net Model
 - A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
-- Offers competitive semantic segmentation performance at a fast rate (28.65 FPS on a 1080 GPU) 
+- Offers competitive semantic segmentation performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
 - See [model.py](model.py) for details; associated train/test scripts are also provided
-- [get_f1_iou.py](get_f1_iou.py) is used for performance evaluation 
+- Checkout the [get_f1_iou.py](get_f1_iou.py) script for performance evaluation 
 
 
 #### Benchmark Evaluation
 - Performance analysis for semantic segmentation and saliency prediction
 - SOTA models in comparison: • FCN • UNet • SegNet • PSPNet • DeepLab-v3 
 - Metrics: • region similarity (F score) and • contour accuracy (mIOU)
-- Detailed analysis and implementation details are provided in the paper
+- Further analysis and implementation details are provided in the paper
 
 ![det-data](/data/quan.png)
 ![det-data](/data/qual.png)
@@ -30,4 +30,8 @@
 - https://github.com/qubvel/segmentation_models
 - https://github.com/divamgupta/image-segmentation-keras
 - https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap
+- https://github.com/zhixuhao/unet
+- https://github.com/aurora95/Keras-FCN
+- https://github.com/MLearing/Keras-Deeplab-v3-plus/
+- https://github.com/wenguanwang/ASNet
 
