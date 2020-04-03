@@ -1,6 +1,5 @@
-### Pointers
-- Preprint: 
-- Datasets: http://irvlab.cs.umn.edu/resources/suim-dataset
+### Pointers: 
+- [Preprint](soon) - [Datasets](http://irvlab.cs.umn.edu/resources/suim-dataset) - [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
 
 ### SUIM Dataset
 - For semantic segmentation of natural underwater images
