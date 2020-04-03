@@ -1,7 +1,7 @@
-#### Pointers: 
+### Pointers: 
 - [Paper (arxiv preprint)](soon)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
 
-#### SUIM Dataset
+### SUIM Dataset
 - For semantic segmentation of natural underwater images
 - 1525 annotated images for training/validation and 110 samples for testing
 - **BW**: Background/waterbody • **HD**: human divers • **PF**: Aquatic plants and sea-grass • **WR**: Wrecks/ruins
@@ -9,16 +9,16 @@
 ![det-data](/data/samples.jpg)
 
 
-#### SUIM-Net Model
+### SUIM-Net Model
 - A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
 - Offers competitive semantic segmentation performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
 - See [model.py](model.py) for details; associated train/test scripts are also provided
 - Checkout the [get_f1_iou.py](get_f1_iou.py) script for performance evaluation 
 
 
-#### Benchmark Evaluation
+### Benchmark Evaluation
 - Performance analysis for semantic segmentation and saliency prediction
-- SOTA models in comparison: • FCN • UNet • SegNet • PSPNet • DeepLab-v3 
+- SOTA models in comparison: • [FCN](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) • [UNet](https://arxiv.org/pdf/1505.04597.pdf) • [SegNet](https://arxiv.org/pdf/1505.07293.pdf) • [PSPNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhao_Pyramid_Scene_Parsing_CVPR_2017_paper.pdf) • [DeepLab-v3](https://arxiv.org/pdf/1706.05587.pdf) 
 - Metrics: • region similarity (F score) and • contour accuracy (mIOU)
 - Further analysis and implementation details are provided in the paper
 
