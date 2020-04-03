@@ -16,8 +16,9 @@
 - For semantic segmentation of natural underwater images
 - 1525 annotated images for training/validation and 110 samples for testing
 - Object categories and RGB color codes: 
-	- **BW**: Background; **HD**: human divers; **PF**: plants/sea-grass; **WR**: Wrecks/ruins
-	- **RO**: Robots; **RI**: Reefs and invertebrates; **FV**: Fish and vertebrates; **SR**: Sea-floor/rocks
+	- **BW**: Background (waterbody); **HD**: human divers; **PF**: Aquatic plants and sea-grass; **WR**: Wrecks/ruins
+	- **RO**: Robots (AUVs/ROVs/instruments); **RI**: Reefs and invertebrates; **FV**: Fish and vertebrates; **SR**: Sea-floor/rocks
+
 ![det-1a](/data/samples.jpg)
 
 
