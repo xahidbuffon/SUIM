@@ -59,14 +59,13 @@ RGB color code and object categories (see paper for details):
 // note that PF and SR are not considered in this test model
 -------------------------------------------------------------
 """
-
 def get_rgb_from_masks(HD, RO, WR, RI, FB, BGR=False):
     imw, imh = HD.shape[0], HD.shape[1]
     mask_rgb = np.zeros((imw, imh, 3))
     mask_r = np.zeros((imw, imh))
     mask_g = np.zeros((imw, imh))
     mask_b = np.zeros((imw, imh))
-    # see 
+    # copy bits to rgb channels
     mask_r = np.logical_or(mask_r, RO)
     mask_b = np.logical_or(mask_b, HD)
     mask_r = np.logical_or(mask_r, RI)
@@ -75,7 +74,6 @@ def get_rgb_from_masks(HD, RO, WR, RI, FB, BGR=False):
     mask_g = np.logical_or(mask_g, FB)
     mask_b = np.logical_or(mask_b, WR)
     mask_b = np.logical_or(mask_b, RI)    
-
     if BGR: # return BGR
         return np.stack((mask_b, mask_g, mask_r), -1)*255.
     else: # return RGB
