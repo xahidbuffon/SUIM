@@ -1,5 +1,5 @@
 """
-# The SUIM-Net model for underwater image segmentation
+# SUIM-Net model for underwater image segmentation
 # Paper:  
 # Maintainer: Jahid (email: islam034@umn.edu)
 # Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
