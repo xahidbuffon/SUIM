@@ -1,5 +1,5 @@
 ### Pointers: 
-- [Paper (arxiv preprint)](soon)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
+- [Paper (arxiv preprint)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
 
 ### SUIM Dataset
 - For semantic segmentation of natural underwater images
@@ -12,8 +12,8 @@
 ### SUIM-Net Model
 - A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
 - Offers competitive semantic segmentation performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
-- See [model.py](model.py) for details; associated train/test scripts are also provided
-- Checkout the [get_f1_iou.py](get_f1_iou.py) script for performance evaluation 
+- Detailed architecture is in [model.py](model.py); associated train/test scripts are also provided
+- The [get_f1_iou.py](get_f1_iou.py) script is used for performance evaluation 
 
 
 ### Benchmark Evaluation

@@ -1,6 +1,6 @@
 """
 # Training pipeline of the SUIM-Net
-# Paper:  
+# Paper: https://arxiv.org/pdf/2004.01241.pdf  
 # Maintainer: Jahid (email: islam034@umn.edu)
 # Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
 # Usage: for academic and educational purposes only

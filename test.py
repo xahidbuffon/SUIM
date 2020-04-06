@@ -1,7 +1,7 @@
 """
 # Test script for the SUIM-Net
     # for 5 object categories: HD, FV, RO, RI, WR 
-# Paper:  
+# Paper: https://arxiv.org/pdf/2004.01241.pdf  
 # Maintainer: Jahid (email: islam034@umn.edu)
 # Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
 # Usage: for academic and educational purposes only
