@@ -38,7 +38,7 @@ data_gen_args = dict(rotation_range=0.2,
 model = SUIM_Net(im_res=(im_h, im_w), n_classes=5).model
 print (model.summary())
 
-Load_ckpt = True
+Load_ckpt = False
 # load saved model
 if Load_ckpt: model.load_weights(model_ckpt_name)
 model_checkpoint = ModelCheckpoint(model_ckpt_name, 
