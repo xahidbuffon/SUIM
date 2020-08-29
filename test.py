@@ -45,40 +45,6 @@ print (model.summary())
 model_ckpt_name = "sample_test/ckpt_seg_5obj.hdf5"
 model.load_weights(model_ckpt_name)
 
-"""
-RGB color code and object categories (see paper for details):
--------------------------------------------------------------
-000 BW: Background waterbody
-001 HD: Human divers
-010 PF: Plants/sea-grass
-011 WR: Wrecks/ruins
-100 RO: Robots/instruments
-101 RI: Reefs and invertebrates
-110 FV: Fish and vertebrates
-111 SR: Sand/sea-floor (& rocks)
-// note that PF and SR are not considered in this test model
--------------------------------------------------------------
-"""
-def get_rgb_from_masks(HD, RO, WR, RI, FB, BGR=False):
-    imw, imh = HD.shape[0], HD.shape[1]
-    mask_rgb = np.zeros((imw, imh, 3))
-    mask_r = np.zeros((imw, imh))
-    mask_g = np.zeros((imw, imh))
-    mask_b = np.zeros((imw, imh))
-    # copy bits to rgb channels
-    mask_r = np.logical_or(mask_r, RO)
-    mask_b = np.logical_or(mask_b, HD)
-    mask_r = np.logical_or(mask_r, RI)
-    mask_r = np.logical_or(mask_r, FB)
-    mask_g = np.logical_or(mask_g, WR)
-    mask_g = np.logical_or(mask_g, FB)
-    mask_b = np.logical_or(mask_b, WR)
-    mask_b = np.logical_or(mask_b, RI)    
-    if BGR: # return BGR
-        return np.stack((mask_b, mask_g, mask_r), -1)*255.
-    else: # return RGB
-        return np.stack((mask_r, mask_g, mask_b), -1)*255.
-
 
 def testGenerator():
     # test all images in the directory
@@ -109,9 +75,6 @@ def testGenerator():
         misc.imsave(HD_dir+img_name+'.bmp', HDs)
         misc.imsave(RI_dir+img_name+'.bmp', RIs)
         misc.imsave(WR_dir+img_name+'.bmp', WRs)
-        # combine the masks in a single RGB and save
-        mask_rgb = get_rgb_from_masks(HDs, ROs, WRs, RIs, FVs)
-        misc.imsave(samples_dir+img_name+'.bmp', mask_rgb)
 
 # test images
 testGenerator()
