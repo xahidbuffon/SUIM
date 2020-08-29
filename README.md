@@ -21,7 +21,7 @@
 
 ### SUIM-Net Model
 - A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
-- Offers competitive semantic segmentation performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
+- Very simple and light model; offers reasonable performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
 - Detailed architecture is in [model.py](model.py); associated train/test scripts are also provided
 - The [get_f1_iou.py](get_f1_iou.py) script is used for performance evaluation 
 
