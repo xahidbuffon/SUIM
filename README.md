@@ -1,5 +1,4 @@
-### Pointers: 
-- [Paper (arxiv preprint)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
+#### Pointers: [Paper (arxiv preprint)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
 
 
 ### SUIM Dataset
@@ -28,7 +27,7 @@
 
 
 ### Bibliography entry:
-	```
+	
 	@inproceedings{islam2020suim,
 	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
 	  author={Islam, Md Jahidul and Edge, Chelsey and Xiao, Yuyang and Luo, Peigen and Mehtaz, 
@@ -37,7 +36,7 @@
 	  year={2020},
 	  organization={IEEE/RSJ}
 	}
-	```
+	
 
 #### Acknowledgements
 - https://github.com/qubvel/segmentation_models
