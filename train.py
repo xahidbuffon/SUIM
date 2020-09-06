@@ -1,16 +1,14 @@
 """
 # Training pipeline of the SUIM-Net
 # Paper: https://arxiv.org/pdf/2004.01241.pdf  
-# Maintainer: Jahid (email: islam034@umn.edu)
-# Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
-# Usage: for academic and educational purposes only
 """
 from __future__ import print_function, division
 import os
-# keras libs
-from keras.callbacks import ModelCheckpoint
+import math
+from os.path import join, exists
+from keras import callbacks
 # local libs
-from model import SUIM_Net
+from models.suim_net import SUIM_Net
 from utils.data_utils import trainDataGenerator
 
 ## dataset directory
@@ -19,12 +17,26 @@ train_dir = "/mnt/data1/ImageSeg/suim/train_val/"
 
 ## ckpt directory
 ckpt_dir = "ckpt/"
-model_ckpt_name = os.path.join(ckpt_dir, "suim_net5.hdf5")
-if not os.path.exists(ckpt_dir): os.makedirs(ckpt_dir)
+base_ = 'VGG' # or 'RSB'
+if base_=='RSB':
+    im_res_ = (320, 240, 3) 
+    ckpt_name = "suimnet_rsb.hdf5"
+else: 
+    im_res_ = (320, 256, 3)
+    ckpt_name = "suimnet_vgg.hdf5"
+model_ckpt_name = join(ckpt_dir, ckpt_name)
+if not exists(ckpt_dir): os.makedirs(ckpt_dir)
 
-## input/output shapes
-im_w, im_h, chan = 320, 240, 3
+## initialize model
+suimnet = SUIM_Net(base=base_, im_res=im_res_, n_classes=5)
+model = suimnet.model
+print (model.summary())
+## load saved model
+#model.load_weights(join("ckpt/saved/", "***.hdf5"))
 
+
+batch_size = 8
+num_epochs = 50
 # setup data generator
 data_gen_args = dict(rotation_range=0.2,
                     width_shift_range=0.05,
@@ -34,31 +46,25 @@ data_gen_args = dict(rotation_range=0.2,
                     horizontal_flip=True,
                     fill_mode='nearest')
 
-## initialize model
-model = SUIM_Net(im_res=(im_h, im_w), n_classes=5).model
-print (model.summary())
-
-Load_ckpt = False
-# load saved model
-if Load_ckpt: model.load_weights(model_ckpt_name)
-model_checkpoint = ModelCheckpoint(model_ckpt_name, 
+model_checkpoint = callbacks.ModelCheckpoint(model_ckpt_name, 
                                    monitor = 'loss', 
-                                   verbose = 1, 
+                                   verbose = 1, mode= 'auto',
+                                   save_weights_only = True,
                                    save_best_only = True)
 
 # data generator
-train_gen = trainDataGenerator(4, # batch_size 
+train_gen = trainDataGenerator(batch_size, # batch_size 
                               train_dir,# train-data dir
                               "images", # image_folder 
                               "masks", # mask_folder
                               data_gen_args, # aug_dict
                               image_color_mode="rgb", 
                               mask_color_mode="rgb",
-                              target_size = (im_h, im_w))
+                              target_size = (im_res_[1], im_res_[0]))
 
 ## fit model
 model.fit_generator(train_gen, 
                     steps_per_epoch = 5000,
-                    epochs = 50,
+                    epochs = num_epochs,
                     callbacks = [model_checkpoint])
 

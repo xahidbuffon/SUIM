@@ -1,9 +1,6 @@
 """
 # Data utility functions for training on the SUIM dataset
 # Paper: https://arxiv.org/pdf/2004.01241.pdf  
-# Maintainer: Jahid (email: islam034@umn.edu)
-# Interactive Robotics and Vision Lab (http://irvlab.cs.umn.edu/)
-# Usage: for academic and educational purposes only
 """
 from __future__ import print_function
 from keras.preprocessing.image import ImageDataGenerator
@@ -11,7 +8,6 @@ import numpy as np
 import os
 import fnmatch
 import itertools as it
-from scipy import misc
 
 """
 RGB color code and object categories:
@@ -149,10 +145,4 @@ def getPaths(data_dir):
                     image_paths.append(fname_)
     return image_paths
 
-
-def read_and_resize(path, img_res):
-    # read and resize image files
-    img = misc.imread(path, mode='RGB').astype(np.float)  
-    img = misc.imresize(img, img_res)
-    return img
 

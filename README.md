@@ -1,16 +1,7 @@
 ### Pointers: 
 - [Paper (arxiv preprint)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
-- Bibliography entry:
-	```
-	@inproceedings{islam2020suim,
-	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
-	  author={Islam, Md Jahidul and Edge, Chelsey and Xiao, Yuyang and Luo, Peigen and Mehtaz, 
-                  Muntaqim and Morse, Christopher and Enan, Sadman Sakib and Sattar, Junaed},
-	  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
-	  year={2020},
-	  organization={IEEE/RSJ}
-	}
-	```
+
+
 ### SUIM Dataset
 - For semantic segmentation of natural underwater images
 - 1525 annotated images for training/validation and 110 samples for testing
@@ -36,7 +27,19 @@
 ![det-data](/data/qual.png)
 
 
-### Acknowledgements
+### Bibliography entry:
+	```
+	@inproceedings{islam2020suim,
+	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
+	  author={Islam, Md Jahidul and Edge, Chelsey and Xiao, Yuyang and Luo, Peigen and Mehtaz, 
+                  Muntaqim and Morse, Christopher and Enan, Sadman Sakib and Sattar, Junaed},
+	  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+	  year={2020},
+	  organization={IEEE/RSJ}
+	}
+	```
+
+#### Acknowledgements
 - https://github.com/qubvel/segmentation_models
 - https://github.com/divamgupta/image-segmentation-keras
 - https://github.com/floodsung/Deep-Learning-Papers-Reading-Roadmap

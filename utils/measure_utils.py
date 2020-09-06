@@ -1,6 +1,5 @@
 """
 Thanks to https://github.com/fperazzi/davis
-    "Evaluation Methodology for Video Object Segmentation"
 """
 import numpy as np
 from skimage.morphology import binary_dilation,disk
