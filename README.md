@@ -1,4 +1,4 @@
-#### Pointers: [Paper (arxiv preprint)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
+####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
 
 
 ### SUIM Dataset
