@@ -7,7 +7,6 @@ from __future__ import print_function, division
 import os
 import ntpath
 import numpy as np
-from scipy import misc
 from PIL import Image
 from os.path import join, exists
 # local libs
@@ -78,10 +77,5 @@ def testGenerator():
 
 # test images
 testGenerator()
-
-
-
-
-
 
 
