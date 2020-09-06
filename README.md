@@ -26,7 +26,7 @@
 ![det-data](/data/qual.png)
 
 
-### Bibliography entry:
+### Bibliography Entry:
 	
 	@inproceedings{islam2020suim,
 	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
