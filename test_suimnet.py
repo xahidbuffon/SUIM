@@ -16,10 +16,10 @@ from utils.data_utils import getPaths
 
 ## experiment directories
 #test_dir = "/mnt/data1/ImageSeg/suim/TEST/images/"
-test_dir = "sample_test/images/"
+test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "sample_test/output/"
+samples_dir = "data/test/output/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"

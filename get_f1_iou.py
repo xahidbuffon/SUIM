@@ -11,10 +11,10 @@ from utils.measure_utils import db_eval_boundary, IoU_bin
 
 ## experiment directories
 obj_cat = "RO/" # sub-dir  ["RI/", "FV/", "WR/", "RO/", "HD/"]
-test_dir = "sample_test/masks/"
-test_dir = "/home/xahid/datasets/released/SUIM/TEST/masks/"
+test_dir = "data/test/masks/"
+#test_dir = "/mnt/data1/ImageSeg/suim/TEST/masks/"
 real_mask_dir = test_dir + obj_cat # real labels
-gen_mask_dir = "sample_test/output/" + obj_cat # generated labels
+gen_mask_dir = "data/test/output/" + obj_cat # generated labels
 
 ## input/output shapes
 im_res = (320, 240)
