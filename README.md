@@ -1,12 +1,13 @@
-####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)
+Repository for the paper *[Semantic Segmentation of Underwater Imagery: Dataset and Benchmark (IROS 2020)](https://arxiv.org/pdf/2004.01241.pdf)* 
 
+####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset (Google Drive)](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data (Google Drive)](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints (Google Drive)](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
+![det-data](/data/samples.jpg)
 
 ### SUIM Dataset
 - For semantic segmentation of natural underwater images
 - 1525 annotated images for training/validation and 110 samples for testing
 - **BW**: Background/waterbody • **HD**: human divers • **PF**: Aquatic plants and sea-grass • **WR**: Wrecks/ruins
 - **RO**: Robots/instruments   • **RI**: Reefs/invertebrates • **FV**: Fish and vertebrates • **SR**: Sea-floor/rocks
-![det-data](/data/samples.jpg)
 
 
 ### SUIM-Net Model
