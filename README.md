@@ -1,7 +1,8 @@
 *Repository for the paper [Semantic Segmentation of Underwater Imagery: Dataset and Benchmark (IROS 2020)](https://arxiv.org/pdf/2004.01241.pdf)* 
 
-####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
 ![det-data](/data/samples.jpg)
+
+####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
 
 ### SUIM Dataset
 - For semantic segmentation of natural underwater images
@@ -11,9 +12,9 @@
 
 
 ### SUIM-Net Model
-- A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
+- A fully-convolutional encoder-decoder network
 - SUIM-Net (RSB): simple and light model; offers reasonable performance at a fast rate 
-- SUIM-Net (VGG): simple and light model; provides better generalization performance 
+- SUIM-Net (VGG): provides better generalization performance 
 - Detailed architecture is in [models](/models/); associated train/test scripts are also provided
 - The [get_f1_iou.py](get_f1_iou.py) script is used for performance evaluation 
 
@@ -22,13 +23,13 @@
 - Performance analysis for semantic segmentation and saliency prediction
 - SOTA models in comparison: • [FCN](https://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Long_Fully_Convolutional_Networks_2015_CVPR_paper.pdf) • [UNet](https://arxiv.org/pdf/1505.04597.pdf) • [SegNet](https://arxiv.org/pdf/1505.07293.pdf) • [PSPNet](http://openaccess.thecvf.com/content_cvpr_2017/papers/Zhao_Pyramid_Scene_Parsing_CVPR_2017_paper.pdf) • [DeepLab-v3](https://arxiv.org/pdf/1706.05587.pdf) 
 - Metrics: • region similarity (F score) and • contour accuracy (mIOU)
-- Further analysis and implementation details are provided in the paper
+- Download experimental data [from here](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing) and checkpoints data [from here](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing)
 
 ![det-data](/data/quan.png)
 ![det-data](/data/qual.png)
 
 
-### Bibliography Entry:
+#### Bibliography Entry:
 	
 	@inproceedings{islam2020suim,
 	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
