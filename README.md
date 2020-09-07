@@ -1,6 +1,6 @@
-Repository for the paper *[Semantic Segmentation of Underwater Imagery: Dataset and Benchmark (IROS 2020)](https://arxiv.org/pdf/2004.01241.pdf)* 
+*Repository for the paper [Semantic Segmentation of Underwater Imagery: Dataset and Benchmark (IROS 2020)](https://arxiv.org/pdf/2004.01241.pdf)* 
 
-####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset (Google Drive)](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data (Google Drive)](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints (Google Drive)](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
+####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
 ![det-data](/data/samples.jpg)
 
 ### SUIM Dataset
@@ -12,8 +12,9 @@ Repository for the paper *[Semantic Segmentation of Underwater Imagery: Dataset 
 
 ### SUIM-Net Model
 - A fully-convolutional encoder-decoder network: embodies residual learning and mirrored skip connection
-- Very simple and light model; offers reasonable performance at a fast rate (**28.65 FPS** on a 1080 GPU) 
-- Detailed architecture is in [model.py](model.py); associated train/test scripts are also provided
+- SUIM-Net (RSB): simple and light model; offers reasonable performance at a fast rate 
+- SUIM-Net (VGG): simple and light model; provides better generalization performance 
+- Detailed architecture is in [models](/models/); associated train/test scripts are also provided
 - The [get_f1_iou.py](get_f1_iou.py) script is used for performance evaluation 
 
 
