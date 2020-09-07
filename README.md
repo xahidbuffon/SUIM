@@ -1,5 +1,4 @@
-*Repository for the paper [Semantic Segmentation of Underwater Imagery: Dataset and Benchmark (IROS 2020)](https://arxiv.org/pdf/2004.01241.pdf)* 
-
+*Repository for the paper [Semantic Segmentation of Underwater Imagery: Dataset and Benchmark](https://arxiv.org/pdf/2004.01241.pdf) (IROS 2020)* 
 ![det-data](/data/samples.jpg)
 
 ####  • [Paper (ArXiv)](https://arxiv.org/pdf/2004.01241.pdf)  • [Virtual Talk](https://youtu.be/LxWrhVeIkdg)  • [SUIM Dataset](http://irvlab.cs.umn.edu/resources/suim-dataset)  • [Experimental data](https://drive.google.com/drive/folders/1-ZGptUKC-yNFGxvOp207077_-Sf-VPOg?usp=sharing)  • [Checkpoints](https://drive.google.com/drive/folders/1aoluekvB_CzoaqGhLutwtJptIOBasl7i?usp=sharing) 
@@ -29,7 +28,7 @@
 ![det-data](/data/qual.png)
 
 
-#### Bibliography Entry:
+#### Bibliography Entry
 	
 	@inproceedings{islam2020suim,
 	  title={{Semantic Segmentation of Underwater Imagery: Dataset and Benchmark}},
