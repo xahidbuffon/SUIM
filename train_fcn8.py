@@ -20,7 +20,7 @@ model_ckpt_name = join(ckpt_dir, ckpt_name)
 if not exists(ckpt_dir): os.makedirs(ckpt_dir)
 
 ## initialize model
-## use fcn_8_vgg for vgg model
+## use fcn_8 for non-vgg model
 model = fcn_8_vgg(n_classes=5, input_height=im_res_[1], input_width=im_res_[0])
 print (model.summary())
 ## load saved model
