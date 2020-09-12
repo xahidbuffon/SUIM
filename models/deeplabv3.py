@@ -361,7 +361,7 @@ def Deeplabv3(weights='pascal_voc', input_tensor=None, input_shape=(512, 512, 3)
 
     x = Conv2D(classes, (1, 1), padding='same', name=last_layer_name)(x)
     x = BilinearUpsampling(output_size=(input_shape[0], input_shape[1]))(x)
-    out = Conv2D(3, 3, padding='same', activation='sigmoid')(x)
+    out = Conv2D(classes, 3, padding='same', activation='sigmoid')(x)
     # model = Model(input=img_input, output=out)
     # model.compile(optimizer=Adam(lr=1e-4),
     #               loss='binary_crossentropy',

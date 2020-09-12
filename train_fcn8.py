@@ -39,12 +39,11 @@ data_gen_args = dict(rotation_range=0.2,
                     horizontal_flip=True,
                     fill_mode='nearest')
 
-
-model_checkpoint = callbacks.ModelCheckpoint(model_ckpt_name,
-                                   monitor = 'loss',
-                                   verbose = 1,
+model_checkpoint = callbacks.ModelCheckpoint(model_ckpt_name, 
+                                   monitor = 'loss', 
+                                   verbose = 1, mode= 'auto',
+                                   save_weights_only = True,
                                    save_best_only = True)
-
 
 # data generator
 train_gen = trainDataGenerator(batch_size, # batch_size
@@ -54,7 +53,6 @@ train_gen = trainDataGenerator(batch_size, # batch_size
                               data_gen_args, # aug_dict
                               image_color_mode="rgb",
                               mask_color_mode="rgb",
-                              save_to_dir = None,
                               target_size = (im_res_[1],im_res_[0]))
 
 ## fit model

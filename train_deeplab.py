@@ -11,9 +11,7 @@ from utils.data_utils import trainDataGenerator
 
 ## dataset and experiment directories
 dataset_name = "suim"
-data_dir = "/mnt/data1/ImageSeg/suim/traim_val/"
-#data_dir = "./square/"
-train_dir, val_dir = data_dir, data_dir # os.path.join(data_dir, "train"), os.path.join(data_dir, "test")
+train_dir = "/mnt/data1/ImageSeg/suim/train_val/"
 
 ## ckpt directory
 ckpt_dir = "ckpt/"
@@ -40,13 +38,11 @@ data_gen_args = dict(rotation_range=0.2,
                     horizontal_flip=True,
                     fill_mode='nearest')
 
-
-model_checkpoint = callbacks.ModelCheckpoint(model_ckpt_name,
+model_checkpoint = callbacks.ModelCheckpoint(model_ckpt_name, 
                                    monitor = 'loss', 
-                                   verbose = 1, 
+                                   verbose = 1, mode= 'auto',
+                                   save_weights_only = True,
                                    save_best_only = True)
-
-
 
 # data generator
 train_gen = trainDataGenerator(batch_size, # batch_size
@@ -55,8 +51,7 @@ train_gen = trainDataGenerator(batch_size, # batch_size
                               "masks", # mask_folder
                               data_gen_args, # aug_dict
                               image_color_mode="rgb", 
-                              mask_color_mode="rgb", 
-                              save_to_dir = None, 
+                              mask_color_mode="rgb",
                               target_size = (im_res_[1], im_res_[0]))
 
 ## fit model
