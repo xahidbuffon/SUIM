@@ -1,8 +1,9 @@
+"""
+# Training pipeline of FCN8 (VGG) on SUIM 
+"""
 from __future__ import print_function, division
 import os
 from os.path import join, exists
-
-# keras libs
 from keras import callbacks
 # local libs
 from models.fcn import fcn_8, fcn_8_vgg

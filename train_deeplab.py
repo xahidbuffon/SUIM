@@ -1,20 +1,19 @@
+"""
+# Training pipeline of DeepLab V3 on SUIM 
+"""
 from __future__ import print_function, division
 import os
 from os.path import join, exists
-
-# keras libs
 from keras import callbacks
 # local libs
 from models.deeplabv3 import Deeplabv3
 from utils.data_utils import trainDataGenerator
-
 
 ## dataset and experiment directories
 dataset_name = "suim"
 data_dir = "/mnt/data1/ImageSeg/suim/traim_val/"
 #data_dir = "./square/"
 train_dir, val_dir = data_dir, data_dir # os.path.join(data_dir, "train"), os.path.join(data_dir, "test")
-
 
 ## ckpt directory
 ckpt_dir = "ckpt/"

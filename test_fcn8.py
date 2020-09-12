@@ -1,10 +1,14 @@
+"""
+# Test script for the FCN8 (VGG)
+    # for 5 object categories: HD, FV, RO, RI, WR 
+# See https://arxiv.org/pdf/2004.01241.pdf  
+"""
 from __future__ import print_function, division
 import os
 import ntpath
 import numpy as np
 from PIL import Image
-from os.path import join,exists
-
+from os.path import join, exists
 # local libs
 from models.fcn import fcn_8, fcn_8_vgg
 from utils.data_utils import getPaths
@@ -13,7 +17,6 @@ from utils.data_utils import getPaths
 # test_dir = "/mnt/data1/ImageSeg/suim/TEST/images/"
 test_dir = "data/test/images/"
 
-
 ## sample and ckpt dir
 samples_dir = "data/test/output/"
 RO_dir = samples_dir + "RO/"
@@ -21,12 +24,12 @@ FB_dir = samples_dir + "FB/"
 WR_dir = samples_dir + "WR/"
 HD_dir = samples_dir + "HD/"
 RI_dir = samples_dir + "RI/"
-if not os.path.exists(samples_dir): os.makedirs(samples_dir)
-if not os.path.exists(RO_dir): os.makedirs(RO_dir)
-if not os.path.exists(FB_dir): os.makedirs(FB_dir)
-if not os.path.exists(WR_dir): os.makedirs(WR_dir)
-if not os.path.exists(HD_dir): os.makedirs(HD_dir)
-if not os.path.exists(RI_dir): os.makedirs(RI_dir)
+if not exists(samples_dir): os.makedirs(samples_dir)
+if not exists(RO_dir): os.makedirs(RO_dir)
+if not exists(FB_dir): os.makedirs(FB_dir)
+if not exists(WR_dir): os.makedirs(WR_dir)
+if not exists(HD_dir): os.makedirs(HD_dir)
+if not exists(RI_dir): os.makedirs(RI_dir)
 
 ## input/output shapes
 im_res_ = (320, 240, 3)
