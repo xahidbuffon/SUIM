@@ -2,7 +2,12 @@ import keras
 from keras.models import *
 from keras.layers import *
 
-from .config import IMAGE_ORDERING
+"""
+Code taken from: 
+https://github.com/fchollet/deep-learning-models
+"""
+
+IMAGE_ORDERING = 'channels_last'
 
 if IMAGE_ORDERING == 'channels_first':
     pretrained_url = "https://github.com/fchollet/deep-learning-models/" \

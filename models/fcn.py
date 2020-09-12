@@ -1,17 +1,17 @@
 from keras.models import *
 from keras.layers import *
 from keras.optimizers import *
-
-
-from .config import IMAGE_ORDERING
+# local
 from .vgg16 import get_vgg_encoder
 from .basic_models import vanilla_encoder
 from .BilinearUpSampling import *
 
-
+"""
+Code taken from: 
+https://github.com/divamgupta/image-segmentation-keras
+"""
 
 IMAGE_ORDERING = "channels_last"
-
 
 
 # crop o1 wrt o2

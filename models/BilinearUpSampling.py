@@ -2,6 +2,11 @@ import keras.backend as K
 import tensorflow as tf
 from keras.layers import *
 
+"""
+Code taken from: 
+https://github.com/aurora95/Keras-FCN
+"""
+
 def resize_images_bilinear(X, height_factor=1, width_factor=1, target_height=None, target_width=None, data_format='default'):
     '''Resizes the images contained in a 4D tensor of shape
     - [batch, channels, height, width] (for 'channels_first' data_format)
