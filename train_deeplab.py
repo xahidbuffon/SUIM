@@ -10,11 +10,11 @@ from models.deeplabv3 import Deeplabv3
 from utils.data_utils import trainDataGenerator
 
 ## dataset and experiment directories
-dataset_name = "suim"
-train_dir = "/mnt/data1/ImageSeg/suim/train_val/"
+dataset_name = "SUIM"
+train_dir = "data/train_val/"
 
 ## ckpt directory
-ckpt_dir = "ckpt/"
+ckpt_dir = "myckpt/"
 im_res_ = (320, 320, 3)
 ckpt_name = "deeplabv3.hdf5"
 model_ckpt_name = join(ckpt_dir, ckpt_name)

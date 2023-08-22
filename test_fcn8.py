@@ -10,15 +10,17 @@ import numpy as np
 from PIL import Image
 from os.path import join, exists
 # local libs
-from models.fcn import fcn_8, fcn_8_vgg
+
+
+from models.fcn import  fcn_8, fcn_8_vgg
+# from fcn import fcn_8, fcn_8_vgg
 from utils.data_utils import getPaths
 
 ## experiment directories
-# test_dir = "/mnt/data1/ImageSeg/suim/TEST/images/"
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputFCN8/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FB/"
 WR_dir = samples_dir + "WR/"
@@ -38,7 +40,7 @@ model = fcn_8_vgg(n_classes=5,
                   input_height=im_res_[1],
                   input_width=im_res_[0])
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+model.load_weights(join("ckpt/", ckpt_name))
 
 im_h, im_w = im_res_[1], im_res_[0]
 def testGenerator():

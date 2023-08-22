@@ -9,6 +9,7 @@ import ntpath
 import numpy as np
 from PIL import Image
 from os.path import join, exists
+
 # local libs
 from models.pspnet import mobilenet_pspnet
 from utils.data_utils import getPaths
@@ -18,7 +19,7 @@ from utils.data_utils import getPaths
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputPspnet/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"
@@ -38,7 +39,7 @@ model = mobilenet_pspnet(n_classes=5,
                         input_height=im_res_[1], 
                         input_width=im_res_[0])
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+model.load_weights(join("ckpt/", ckpt_name))
 
 
 im_h, im_w = im_res_[1], im_res_[0]

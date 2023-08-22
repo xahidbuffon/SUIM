@@ -18,7 +18,7 @@ from utils.data_utils import getPaths
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputVGG16/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"
@@ -42,7 +42,7 @@ else:
 suimnet = SUIM_Net(base=base_, im_res=im_res_, n_classes=5)
 model = suimnet.model
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+model.load_weights(join("ckpt/", ckpt_name))
 
 
 im_h, im_w = im_res_[1], im_res_[0]

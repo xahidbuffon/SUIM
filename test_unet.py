@@ -18,7 +18,7 @@ from utils.data_utils import getPaths
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputUnet/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"
@@ -36,7 +36,7 @@ im_res_ = (320, 240, 3)
 ckpt_name = "unet_rgb5.hdf5"
 model = UNet0(input_size=(im_res_[1], im_res_[0], 3), no_of_class=5)
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+model.load_weights(join("ckpt/", ckpt_name))
 
 
 im_h, im_w = im_res_[1], im_res_[0]
