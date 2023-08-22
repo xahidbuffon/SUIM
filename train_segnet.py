@@ -10,11 +10,11 @@ from models.segnet import resnet50_segnet
 from utils.data_utils import trainDataGenerator
 
 ## dataset directory
-dataset_name = "suim"
-train_dir = "/mnt/data1/ImageSeg/suim/train_val/"
+dataset_name = "SUIM"
+train_dir = "data/train_val/"
 
 ## ckpt directory
-ckpt_dir = "ckpt/"
+ckpt_dir = "myckpt/"
 im_res_ = (320, 256, 3)
 ckpt_name = "segnet_resnet.hdf5"
 model_ckpt_name = join(ckpt_dir, ckpt_name)
@@ -29,8 +29,8 @@ print (model.summary())
 #model.load_weights(join("ckpt/saved/", "***.hdf5"))
 
 
-batch_size = 4
-num_epochs = 50
+batch_size = 2
+num_epochs = 20
 # setup data generator
 data_gen_args = dict(rotation_range=0.2,
                     width_shift_range=0.05,
@@ -57,8 +57,8 @@ train_gen = trainDataGenerator(batch_size, # batch_size
                               target_size = (im_res_[1], im_res_[0]))
 
 ## fit model
-model.fit_generator(train_gen, 
-                    steps_per_epoch = 5000,
-                    epochs = num_epochs,
-                    callbacks = [model_checkpoint])
+model.fit(train_gen, 
+          steps_per_epoch = 2,#000,
+          epochs = num_epochs,
+          callbacks = [model_checkpoint])
 

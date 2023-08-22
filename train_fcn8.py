@@ -10,11 +10,11 @@ from models.fcn import fcn_8, fcn_8_vgg
 from utils.data_utils import trainDataGenerator
 
 ## dataset and experiment directories
-dataset_name = "suim"
-train_dir = "/mnt/data1/ImageSeg/suim/train_val/"
+dataset_name = "SUIM"
+train_dir = "data/train_val/"
 
 ## ckpt directory
-ckpt_dir = "ckpt/"
+ckpt_dir = "myckpt/"
 im_res_ = (320, 240, 3)
 ckpt_name = "fcn8_vgg.hdf5"
 model_ckpt_name = join(ckpt_dir, ckpt_name)

@@ -18,7 +18,7 @@ from utils.data_utils import getPaths
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputDeeplab/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FB/"
 WR_dir = samples_dir + "WR/"
@@ -38,7 +38,7 @@ model = Deeplabv3(weights=None,
                   input_shape=im_res_,
                   classes=5)
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+model.load_weights(join("ckpt/", ckpt_name))
 
 im_h, im_w = im_res_[1], im_res_[0]
 def testGenerator():

@@ -18,7 +18,7 @@ from utils.data_utils import getPaths
 test_dir = "data/test/images/"
 
 ## sample and ckpt dir
-samples_dir = "data/test/output/"
+samples_dir = "data/test/outputSeg/"
 RO_dir = samples_dir + "RO/"
 FB_dir = samples_dir + "FV/"
 WR_dir = samples_dir + "WR/"
@@ -33,12 +33,14 @@ if not exists(RI_dir): os.makedirs(RI_dir)
 
 ## input/output shapes
 im_res_ = (320, 256, 3) 
+# checkpoint name
 ckpt_name = "segnet_resnet5.hdf5"
 model = resnet50_segnet(n_classes=5, 
                         input_height=im_res_[1], 
                         input_width=im_res_[0])
 print (model.summary())
-model.load_weights(join("ckpt/saved/", ckpt_name))
+# loads the weights from the checkpoint model 
+model.load_weights(join("ckpt/", ckpt_name))
 
 
 im_h, im_w = im_res_[1], im_res_[0]
@@ -50,10 +52,12 @@ def testGenerator():
         # read and scale inputs
         img = Image.open(p).resize((im_w, im_h))
         img = np.array(img)/255.
+        # expand dimensions by 1 for matrix multiplication
         img = np.expand_dims(img, axis=0)
         # inference
         out_img = model.predict(img)
         # thresholding
+        # if the prediction is greater than 0.5 is the value for the mask
         out_img[out_img>0.5] = 1.
         out_img[out_img<=0.5] = 0.
         print ("tested: {0}".format(p))
